@@ -2,5 +2,5 @@ streamlit
 PIL
 numpy
 tensorflow
-keras.backend
+keras
 pandas
