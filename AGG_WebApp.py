@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image, ImageOps
 import numpy as np
-import tensorflow as tf
+import tensorflow
 import keras.backend as K
 import pandas as pd
 
@@ -24,7 +24,7 @@ def f1_m(y_true, y_pred):
 
 # Load the model
 
-model=tf.keras.models.load_model('C:\\Users\\josej\\OneDrive\\Ambiente de Trabalho\\vgg_foodclass.h5', custom_objects={"f1_m": f1_m})
+model=tensorflow.keras.models.load_model('vgg_foodclass.h5', custom_objects={"f1_m": f1_m})
 
 st.set_page_config(
     page_title="Attrition Prediction App",
