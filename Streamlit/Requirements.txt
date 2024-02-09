@@ -1,0 +1,6 @@
+streamlit
+PIL
+numpy
+tensorflow
+kera.backend
+pandas
