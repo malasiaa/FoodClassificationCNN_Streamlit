@@ -3,4 +3,4 @@ pillow
 numpy
 keras
 pandas
-tensorflow==2.15.0
+tensorflow
