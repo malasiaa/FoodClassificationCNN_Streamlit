@@ -27,7 +27,7 @@ def f1_m(y_true, y_pred):
 #model = tf.keras.models.load_model('vgg_foodclass.h5', custom_objects={"f1_m": f1_m})
 
 st.set_page_config(
-    page_title="Attrition Prediction App",
+    page_title="Food Classification Prediction App",
     page_icon=":compuFter:",
     layout="wide",  # Use "wide" layout for a larger page width
     initial_sidebar_state="expanded",  # Expand the sidebar by default
@@ -42,7 +42,7 @@ logo_url = "data:image/gif;base64,R0lGODlh8wE4AfQAAFNTU+fn5/j4+AEBATExMbi4uDs7Oy
 logo_html = f'<img src="{logo_url}" alt="Logo" width="400" height="350" style="display: block; margin-left: auto; margin-right: auto;">'
 st.markdown(f'<div class="logo-container">{logo_html}</div>',unsafe_allow_html=True)
     
-st.title("Food Multiclassification App")
+st.title("Food Classification App")
 
 st.markdown("**This app supports 34 food categories:** Baked Potato, Crispy Chicken, Donut, Fries, Hot Dog, Sandwich, Taco, Taquito, Apple Pie, Burger, Butter Naan, Chai, Chapati, Cheesecake, Chicken Curry, \n"
         "Chole Bhatura, Dal Makhani, Dhokla, Fried Rice, Ice Cream, Idli, Jalebi, Kaathi Rolls, Kadai Paneer, Kulfi, Masala Dosa, Momos, Omelette, Paani Puri, Pakode, Pav Bhaji, Pizza, Samosa, and Sushi!")
