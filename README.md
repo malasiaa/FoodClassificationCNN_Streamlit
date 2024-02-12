@@ -1,1 +1,3 @@
-# FoodClassificationProject_CNN
+# FoodClassification_WebApp
+
+https://foodclassification-vgg.streamlit.app/
