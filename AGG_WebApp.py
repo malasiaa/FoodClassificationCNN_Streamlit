@@ -5,6 +5,7 @@ import tensorflow as tf
 import keras.backend as K
 import pandas as pd
 import base64
+from keras.utils import get_file
 
 def recall_m(y_true, y_pred):
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
@@ -24,6 +25,18 @@ def f1_m(y_true, y_pred):
     return 2*((precision*recall)/(precision+recall+K.epsilon()))
 
 # Load the model
+from keras.utils import get_file
+
+# Correct raw file URL for the .h5 file on GitHub
+model_url = "https://github.com/malasiaa/FoodClassificationProject_Streamlit/raw/c12f6ebb91febd443a5b41207b8b6952665f2307/vgg_foodclass.h5"
+
+# Download the file and save it locally
+local_model_path = get_file("vgg_foodclass.h5", model_url)
+
+# Loading the model
+model = tf.keras.models.load_model(local_model_path)
+
+
 #model = tf.keras.models.load_model("", custom_objects={"f1_m": f1_m})
 
 st.set_page_config(
