@@ -34,7 +34,7 @@ model_url = "https://github.com/malasiaa/FoodClassificationProject_Streamlit/raw
 local_model_path = get_file("vgg_foodclass.h5", model_url)
 
 # Loading the model
-model = tf.keras.models.load_model(local_model_path)
+model = tf.keras.models.load_model(local_model_path, custom_objects={"f1_m": f1_m})
 
 
 #model = tf.keras.models.load_model("", custom_objects={"f1_m": f1_m})
