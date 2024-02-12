@@ -33,11 +33,22 @@ st.set_page_config(
     initial_sidebar_state="expanded",  # Expand the sidebar by default
     )
 
-charlie_img = st.image('charlie_eatingmachine.gif')
+import streamlit as st
 
-logo_html = f'<img src="{charlie_img}" alt="Logo" width="400" height="350" style="display: block; margin-left: auto; margin-right: auto;">'
-st.markdown(f'<div class="logo-container">{logo_html}</div>',unsafe_allow_html=True)
-    
+# Convert the image to bytes and then to a Base64 encoded string
+def img_to_bytes(img_path):
+    with open(img_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
+
+# Create an HTML string for the image
+def img_to_html(img_path):
+    img_bytes = img_to_bytes(img_path)
+    img_html = f'<img src="data:image/gif;base64,{img_bytes}" class="img-fluid">'
+    return img_html
+
+# Use the markdown function to display the centered image
+st.markdown(f'<div style="text-align: center;">{img_to_html("charlie_eatingmachine.gif")}</div>', unsafe_allow_html=True)
+
 st.title("Food Classification App")
 
 st.markdown("**This app supports 34 food categories:** Baked Potato, Crispy Chicken, Donut, Fries, Hot Dog, Sandwich, Taco, Taquito, Apple Pie, Burger, Butter Naan, Chai, Chapati, Cheesecake, Chicken Curry, \n"
