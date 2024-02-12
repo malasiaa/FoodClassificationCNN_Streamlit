@@ -25,7 +25,8 @@ def f1_m(y_true, y_pred):
 
 # Load the model
 os.chdir(os.getcwd())
-st.write(print(os.getcwd()))
+pp=os.getcwd()
+st.write(print(pp))
 model=tf.keras.models.load_model('vgg_foodclass.h5', custom_objects={"f1_m": f1_m})
 
 st.set_page_config(
