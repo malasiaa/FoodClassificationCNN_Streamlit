@@ -23,8 +23,9 @@ def f1_m(y_true, y_pred):
     recall = recall_m(y_true, y_pred)
     return 2*((precision*recall)/(precision+recall+K.epsilon()))
 
+st.image('charlie_eatingmachine.gif')
 # Load the model
-model = tf.keras.models.load_model('vgg_foodclass.h5', custom_objects={"f1_m": f1_m})
+#model = tf.keras.models.load_model('vgg_foodclass.h5', custom_objects={"f1_m": f1_m})
 
 st.set_page_config(
     page_title="Attrition Prediction App",
