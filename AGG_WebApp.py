@@ -23,8 +23,22 @@ def f1_m(y_true, y_pred):
     recall = recall_m(y_true, y_pred)
     return 2*((precision*recall)/(precision+recall+K.epsilon()))
 
-# Load the model
-model=tf.keras.models.load_model('https://github.com/malasiaa/FoodClassificationProject_Streamlit/blob/c12f6ebb91febd443a5b41207b8b6952665f2307/vgg_foodclass.h5', custom_objects={"f1_m": f1_m})
+import requests
+from io import BytesIO
+
+# URL of the .h5 file
+url = 'https://github.com/malasiaa/FoodClassificationProject_Streamlit/raw/c12f6ebb91febd443a5b41207b8b6952665f2307/vgg_foodclass.h5'
+response = requests.get(url)
+
+# Ensure the request was successful
+assert response.status_code ==  200, "Failed to download model"
+
+st.cache_data()
+# Load the model from the downloaded content
+def load_model():
+    model = tf.keras.models.load_model(BytesIO(response.content), custom_objects={"f1_m": f1_m})
+    return model
+model = load_model()
 
 st.set_page_config(
     page_title="Attrition Prediction App",
