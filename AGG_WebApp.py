@@ -36,7 +36,7 @@ assert response.status_code ==  200, "Failed to download model"
 st.cache_data()
 # Load the model from the downloaded content
 def load_model():
-    model = tf.keras.models.load_model(BytesIO(response.content), custom_objects={"f1_m": f1_m})
+    model = tf.keras.models.load_model('vgg_foodclass.h5', custom_objects={"f1_m": f1_m})
     return model
 model = load_model()
 
