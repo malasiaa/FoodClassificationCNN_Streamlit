@@ -23,15 +23,6 @@ def f1_m(y_true, y_pred):
     recall = recall_m(y_true, y_pred)
     return 2*((precision*recall)/(precision+recall+K.epsilon()))
 
-import requests
-from io import BytesIO
-
-# URL of the .h5 file
-url = 'https://github.com/malasiaa/FoodClassificationProject_Streamlit/raw/c12f6ebb91febd443a5b41207b8b6952665f2307/vgg_foodclass.h5'
-response = requests.get(url)
-
-# Ensure the request was successful
-assert response.status_code ==  200, "Failed to download model"
 
 st.cache_data()
 # Load the model from the downloaded content
