@@ -23,8 +23,6 @@ def f1_m(y_true, y_pred):
     recall = recall_m(y_true, y_pred)
     return 2*((precision*recall)/(precision+recall+K.epsilon()))
 
-
-st.cache_data()
 # Load the model from the downloaded content
 def load_model():
     model = tf.keras.models.load_model('vgg_foodclass.h5', custom_objects={"f1_m": f1_m})
