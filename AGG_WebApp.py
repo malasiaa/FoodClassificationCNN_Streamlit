@@ -24,7 +24,7 @@ def f1_m(y_true, y_pred):
     return 2*((precision*recall)/(precision+recall+K.epsilon()))
 
 # Load the model
-#model = tf.keras.models.load_model("", custom_objects={"f1_m": f1_m})
+model = tf.keras.models.load_model("", custom_objects={"f1_m": f1_m})
 
 st.set_page_config(
     page_title="Food Classification Prediction App",
@@ -33,8 +33,11 @@ st.set_page_config(
     initial_sidebar_state="expanded",  # Expand the sidebar by default
     )
 
-st.image('charlie_eatingmachine.gif')
-  
+charlie_img = st.image('charlie_eatingmachine.gif')
+
+logo_html = f'<img src="{charlie_img}" alt="Logo" width="400" height="350" style="display: block; margin-left: auto; margin-right: auto;">'
+st.markdown(f'<div class="logo-container">{logo_html}</div>',unsafe_allow_html=True)
+    
 st.title("Food Classification App")
 
 st.markdown("**This app supports 34 food categories:** Baked Potato, Crispy Chicken, Donut, Fries, Hot Dog, Sandwich, Taco, Taquito, Apple Pie, Burger, Butter Naan, Chai, Chapati, Cheesecake, Chicken Curry, \n"
