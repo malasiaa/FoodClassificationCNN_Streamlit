@@ -29,7 +29,7 @@ st.cache_data()
 def load_model():
     model = tf.keras.models.load_model('vgg_foodclass.h5', custom_objects={"f1_m": f1_m})
     return model
-model = load_model()
+#model = load_model()
 
 st.set_page_config(
     page_title="Attrition Prediction App",
