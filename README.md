@@ -7,9 +7,11 @@ This was a particularly imbalanced dataset since some categories had 144 images 
 Finally, using the most performant VGG model, it was created a Streamlit WebApp, for easy use of the model capabilities.
 
 From "scracth" model performance
+
 ![image](https://github.com/malasiaa/FoodClassificationCNN_Streamlit/assets/144847430/301d06ae-86b3-4b75-8847-70177c4d28e4)
 
 VGG model performance
+
 ![image](https://github.com/malasiaa/FoodClassificationCNN_Streamlit/assets/144847430/ec7a011e-ea47-43fd-a564-70a1c2bc9e29)
 
 
