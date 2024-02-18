@@ -1,4 +1,4 @@
-![image](https://github.com/malasiaa/FoodClassificationCNN_Streamlit/assets/144847430/88e30ce2-b165-47f4-b48e-d6365fb77972)#Food Classification App
+#Food Classification App
 
 
 
