@@ -2,7 +2,7 @@
 This project aimed to develop a deep learning model (CNN) capable of recognizing various food categories from images. It utilized a Kaggle dataset comprising 24,000 images spanning 34 food categories, ranging from Western to Indian cuisines.
 The dataset was notably imbalanced, with some categories having as few as 144 images while others boasted 1,500. To address this imbalance, the F1-Score was employed as the evaluation metric. This metric is particularly effective in capturing both false positives and false negatives, making it an appropriate choice for this dataset.
 
-Two models were developed using this dataset: one built from scratch and the other leveraging a pre-trained model (VGG16). The F1-Scores achieved by these models were 55% and 77%, respectively. Both models were trained on Google Colab's GPU, with the from-scratch model taking approximately 3 hours and the VGG16-based model taking around 1 hour.
+Two models were developed using this dataset: one built from scratch and the other leveraging a pre-trained model (VGG16). The F1-Scores achieved by these models were 55% and 77%, respectively. Both models were trained on Google Colab's GPU, with the from-scratch model taking approximately 3 hours and the VGG16-based model taking around 1:30 hours of training.
 
 Utilizing the more performant VGG16 model, a Streamlit WebApp was created to facilitate easy access to the model's capabilities.
 
