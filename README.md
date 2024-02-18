@@ -1,6 +1,7 @@
-# FoodClassification_WebApp
+![image](https://github.com/malasiaa/FoodClassificationCNN_Streamlit/assets/144847430/2c05aed1-3c5f-432e-884e-d1d847e11fd6)
+
 
 https://foodclassification-vgg.streamlit.app/
 
-![image](https://github.com/malasiaa/FoodClassificationCNN_Streamlit/assets/144847430/0e6b1e1d-4e3c-4700-9e19-9060e165910f)
+
 
