@@ -26,11 +26,3 @@ PretrainedModel_VGG - Transfer learning of the VGG16 model.
 finalmodel_batch128 - From "scratch" CNN model.
 AGG_WebApp - Script used for the development of the streamlit app, which uses requirements.txt (all the dependencies required to run the model) and vgg_foodclass.h5 (VGG model weights). 
 
-## Streamlit Page
-![image](https://github.com/malasiaa/FoodClassificationCNN_Streamlit/assets/144847430/2c05aed1-3c5f-432e-884e-d1d847e11fd6)
-
-
-
-
-
-
