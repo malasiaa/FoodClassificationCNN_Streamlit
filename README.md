@@ -1,5 +1,4 @@
 # Food Classification App
-## Project Overview
 This project aimed to develop a deep learning model (CNN) capable of recognizing various food categories from images. It utilized a Kaggle dataset comprising 24,000 images spanning 34 food categories, ranging from Western to Indian cuisines.
 The dataset was notably imbalanced, with some categories having as few as 144 images while others boasted 1,500. To address this imbalance, the F1-Score was employed as the evaluation metric. This metric is particularly effective in capturing both false positives and false negatives, making it an appropriate choice for this dataset.
 
@@ -7,8 +6,8 @@ Two models were developed using this dataset: one built from scratch and the oth
 
 Utilizing the more performant VGG16 model, a Streamlit WebApp was created to facilitate easy access to the model's capabilities.
 
-### WebApp: https://foodclassification-vgg.streamlit.app/
-### Kaggle dataset: https://www.kaggle.com/datasets/harishkumardatalab/food-image-classification-dataset/data
+WebApp: https://foodclassification-vgg.streamlit.app/
+Kaggle dataset: https://www.kaggle.com/datasets/harishkumardatalab/food-image-classification-dataset/data
 
 ## Model performance
 ### From "Scratch" Model Performance
