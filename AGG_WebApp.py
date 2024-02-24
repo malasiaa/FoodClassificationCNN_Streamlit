@@ -109,9 +109,9 @@ else:
             predictions = import_and_predict(image, model)
             class_names = ['Baked Potato', 'Crispy Chicken', 'Donut', 'Fries', 'Hot Dog', 'Sandwich', 'a Taco!', 'Taquitooo :)', 'Apple Pie', 'a Burguer', 'Butter Naan', 'Chai', 'Chapati', 'Cheesecake', 'Chicken Curry', 'Chole Bhatura', 'Dal Makhani', 'Dhokla', 'Fried Rice', 'Ice Cream', 'Idli', 'Jalebi', 'Kaathi Rolls', 'Kadai Paneer', 'Kulfi', 'Masala Dosa', 'Momos', 'Omelette', 'Paani Puri', 'Pakode', 'Pav Bhaji', 'Pizzaaaaa!', 'Samosa', 'Sushi! (disguised sugars)']
             string="This image most likely is: "+class_names[np.argmax(predictions)]
-            st.success(string)
+            st.success(string,icon="✅")
         except: 
-            st.markdown('Unable to categorize image, **please try another one! :)**')
+            st.success('Unable to categorize image, please try another one! :)',icon="🚨")
     with cols[2]:
         st.write(' ')
         
