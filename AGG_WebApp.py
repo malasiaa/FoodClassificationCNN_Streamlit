@@ -111,7 +111,7 @@ else:
             string="This image most likely is: "+class_names[np.argmax(predictions)]
             st.success(string)
         except: 
-            st.markdown('**Unable to categorize image, please try another one! :)**)')
+            st.markdown('Unable to categorize image, **please try another one! :)**')
     with cols[2]:
         st.write(' ')
         
