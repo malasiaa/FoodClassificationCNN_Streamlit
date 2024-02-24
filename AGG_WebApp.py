@@ -76,28 +76,18 @@ def import_and_predict (image_data, model):
     for the model, converted to a NumPy array, and then fed into the model for prediction.
     The function returns the prediction result.
     '''
-    try:
-        # Define the target size for the image, to VGG16 model
-        size=(224,224)
-        image = ImageOps.fit(image_data, size, Image.LANCZOS)
-        # Convert to a NumPy array
-        img = np.asarray(image)
-        # Expand the dimensions of the array to match the input shape expected by the model
-        img_reshape = img[np.newaxis,...]
-        # Use the model to predict the class of the image
-        prediction = model.predict(img_reshape)[0]
 
-        # Find the category with the highest confidence score
-        max_score_index = np.argmax(prediction)
-        # Define a confidence threshold
-        confidence_threshold =  0.7  # Adjust this value based on your model's performance
-        # Check if the highest confidence score is below the threshold
-        if prediction[max_score_index] < confidence_threshold:
-            raise ValueError("Model is uncertain about the image category.")
-        
-        return prediction
-    except:
-        return 'Unable to categorize image, please try another one! :)\n(try by searching for the categories above in google)'
+    # Define the target size for the image, to VGG16 model
+    size=(224,224)
+    image = ImageOps.fit(image_data, size, Image.LANCZOS)
+    # Convert to a NumPy array
+    img = np.asarray(image)
+    # Expand the dimensions of the array to match the input shape expected by the model
+    img_reshape = img[np.newaxis,...]
+    # Use the model to predict the class of the image
+    prediction = model.predict(img_reshape)[0]
+
+    return prediction
 
 # Uploader field
 file = st.file_uploader("**Please upload a food image:**", type=["jpg","png","jpeg"])
@@ -106,20 +96,23 @@ file = st.file_uploader("**Please upload a food image:**", type=["jpg","png","jp
 if file is None:
     st.text("")
 else:
-    # If a file is uploaded, open it as an image
-    image=Image.open(file)
-    # The page width was divided into three for no particular reason besides looks
-    cols = st.columns(3)
-    # Display the uploaded image in the first column with fixed width
-    with cols[0]:
-        st.image(image, width=400, use_column_width=False)
-    # Predict the class of the uploaded image using the imported_and_predict function
-    with cols[1]:
-        predictions = import_and_predict(image, model)
-        class_names = ['Baked Potato', 'Crispy Chicken', 'Donut', 'Fries', 'Hot Dog', 'Sandwich', 'a Taco!', 'Taquitooo :)', 'Apple Pie', 'a Burguer', 'Butter Naan', 'Chai', 'Chapati', 'Cheesecake', 'Chicken Curry', 'Chole Bhatura', 'Dal Makhani', 'Dhokla', 'Fried Rice', 'Ice Cream', 'Idli', 'Jalebi', 'Kaathi Rolls', 'Kadai Paneer', 'Kulfi', 'Masala Dosa', 'Momos', 'Omelette', 'Paani Puri', 'Pakode', 'Pav Bhaji', 'Pizzaaaaa!', 'Samosa', 'Sushi! (disguised sugars)']
-        string="This image most likely is: "+class_names[np.argmax(predictions)]
-        st.success(string)
-    with cols[2]:
-        st.write(' ')
+    try:
+        # If a file is uploaded, open it as an image
+        image=Image.open(file)
+        # The page width was divided into three for no particular reason besides looks
+        cols = st.columns(3)
+        # Display the uploaded image in the first column with fixed width
+        with cols[0]:
+            st.image(image, width=400, use_column_width=False)
+        # Predict the class of the uploaded image using the imported_and_predict function
+        with cols[1]:
+            predictions = import_and_predict(image, model)
+            class_names = ['Baked Potato', 'Crispy Chicken', 'Donut', 'Fries', 'Hot Dog', 'Sandwich', 'a Taco!', 'Taquitooo :)', 'Apple Pie', 'a Burguer', 'Butter Naan', 'Chai', 'Chapati', 'Cheesecake', 'Chicken Curry', 'Chole Bhatura', 'Dal Makhani', 'Dhokla', 'Fried Rice', 'Ice Cream', 'Idli', 'Jalebi', 'Kaathi Rolls', 'Kadai Paneer', 'Kulfi', 'Masala Dosa', 'Momos', 'Omelette', 'Paani Puri', 'Pakode', 'Pav Bhaji', 'Pizzaaaaa!', 'Samosa', 'Sushi! (disguised sugars)']
+            string="This image most likely is: "+class_names[np.argmax(predictions)]
+            st.success(string)
+        with cols[2]:
+            st.write(' ')
+    except:
+        st.markdown('EEUnable to categorize image, please try another one! :)\n(try by searching for the categories above in google**)')
 
     
