@@ -11,7 +11,7 @@ Utilizing the more performant VGG16 model, a Streamlit WebApp was created to fac
 
 #### Kaggle Dataset: https://www.kaggle.com/datasets/harishkumardatalab/food-image-classification-dataset/data
 
-## Model performance during training
+## Model performance
 ### From "Scratch" Model:
 
 ![image](https://github.com/malasiaa/FoodClassificationCNN_Streamlit/assets/144847430/301d06ae-86b3-4b75-8847-70177c4d28e4)
