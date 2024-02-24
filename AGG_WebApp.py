@@ -86,14 +86,6 @@ def import_and_predict (image_data, model):
         img_reshape = img[np.newaxis,...]
         # Use the model to predict the class of the image
         prediction = model.predict(img_reshape)[0]
-
-        # Find the category with the highest confidence score
-        max_score_index = np.argmax(prediction)
-        # Define a confidence threshold
-        confidence_threshold =  0.5  # Adjust this value based on your model's performance
-        # Check if the highest confidence score is below the threshold
-        if prediction[max_score_index] < confidence_threshold:
-            raise ValueError("Model is uncertain about the image category.")
         
         return prediction
     except:
