@@ -14,7 +14,7 @@ Utilizing the more performant VGG16 model, a Streamlit WebApp was created to fac
 ## Model performance
 ### From "Scratch" Model:
 
-![image](https://github.com/malasiaa/FoodClassificationCNN_Streamlit/assets/144847430/301d06ae-86b3-4b75-8847-70177c4d28e)
+![image]([https://github.com/malasiaa/FoodClassificationCNN_Streamlit/assets/144847430/301d06ae-86b3-4b75-8847-70177c4d28e4](https://foodclassification-model.streamlit.app/))
 
 ### VGG Model:
 
@@ -23,6 +23,8 @@ Utilizing the more performant VGG16 model, a Streamlit WebApp was created to fac
 
 ## Resources
 PretrainedModel_VGG - Transfer learning of the VGG16 model.
+
 finalmodel_batch128 - From "scratch" CNN model.
+
 AGG_WebApp - Script used for the development of the streamlit app, which uses requirements.txt (all the dependencies required to run the model) and vgg_foodclass.h5 (VGG model weights). 
 
