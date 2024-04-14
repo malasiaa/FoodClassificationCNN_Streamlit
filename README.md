@@ -7,7 +7,7 @@ Two models were developed using this dataset: one built from scratch and the oth
 Utilizing the more performant VGG16 model, a Streamlit WebApp was created to facilitate easy access to the model's capabilities.
 
 
-#### WebApp: https://foodclassification-model.streamlit.app/
+#### WebApp: https://foodclassification-model.streamlit.app
 
 #### Kaggle Dataset: https://www.kaggle.com/datasets/harishkumardatalab/food-image-classification-dataset/data
 
