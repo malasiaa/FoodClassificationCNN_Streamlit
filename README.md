@@ -14,7 +14,7 @@ Utilizing the more performant VGG16 model, a Streamlit WebApp was created to fac
 ## Model performance
 ### From "Scratch" Model:
 
-![image](https://github.com/malasiaa/FoodClassificationCNN_Streamlit/assets/144847430/301d06ae-86b3-4b75-8847-70177c4d28e4)
+![image]([https://github.com/malasiaa/FoodClassificationCNN_Streamlit/assets/144847430/301d06ae-86b3-4b75-8847-70177c4d28e4](https://foodclassification-model.streamlit.app/))
 
 ### VGG Model:
 
