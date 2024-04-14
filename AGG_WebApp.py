@@ -7,7 +7,7 @@ import pandas as pd
 import base64
 from keras.utils import get_file
 
-# The training used a imbalanced dataset, hence it was used F1-Score to evaluate model performance
+# The training used an imbalanced dataset, hence it was used F1-Score to evaluate model performance
 def recall_m(y_true, y_pred):
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
     possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
