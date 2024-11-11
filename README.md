@@ -1,4 +1,7 @@
 # Food Classification Project
+
+![image](https://github.com/user-attachments/assets/052a5203-73c2-4e88-adab-bf91577d29a8)
+
 This project aimed to develop a deep learning model (CNN) capable of recognizing various food categories from images. It utilized a Kaggle dataset comprising 24,000 images spanning 34 food categories, ranging from Western to Indian cuisines.
 The dataset was notably imbalanced, with some categories having as few as 144 images while others boasted 1,500. To address this imbalance, the F1-Score was employed as the evaluation metric. This metric is particularly effective in capturing both false positives and false negatives, making it an appropriate choice for this dataset.
 
